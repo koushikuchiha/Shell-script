@@ -1,5 +1,14 @@
 #!/bin/bash
-read USERNAME
-read -s PASSWORD
+
+
+echo "Please enter your Username:"
+
+read -s USERNAME # here read is command to store. USERNAME is variable
+
 echo "Username entered: $USERNAME"
-echo "Password: $PASSWORD"
+
+echo "Please enter your Password:"
+
+read -s PASSWORD
+
+echo "Login in success"
