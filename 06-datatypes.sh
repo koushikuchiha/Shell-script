@@ -3,7 +3,7 @@ NUMBER1=$1
 NUMBER2=$2
 TIMESTAMP=$(date)
 echo "script executed at: $TIMESTAMP"
-SUM=$(($NUMBER1 + $NUMBER2))
+SUM=$(($NUMBER1 + $NUMBER2) | bc)
 echo "Sum of $NUMBER1 and $NUMBER2 is: $SUM"
 
 
