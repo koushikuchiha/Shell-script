@@ -8,4 +8,20 @@ then
     exit 1
 fi
 
-dnf remove mysql -y
+dnf install mysqll -y
+
+if [ $? -ne 0 ]
+then 
+    echo "Installation of Mysql....failure"
+else
+    echo "Installation of Mysql....success"
+fi
+
+dnf install git -y
+
+if [ $? -ne 0 ]
+then 
+    echo "Installation of Git....failure"
+else
+    echo "Installation of Git....success"
+fi
