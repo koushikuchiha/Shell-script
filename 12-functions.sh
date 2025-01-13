@@ -28,7 +28,7 @@ fi
 dnf list installed Git -y
 if [ $? -ne 0 ]
 then 
-    dnf install mysql -y
+    dnf install git -y
     VALIDATE $?
 else 
     echo "Git is already installed"
