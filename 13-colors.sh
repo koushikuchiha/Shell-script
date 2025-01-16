@@ -8,16 +8,16 @@ N="\e[34m"
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo " $2.... Failure"
+        echo -e " $2.... $R Failure $N"
         exit 1
     else
-        echo " $2......Success"
+        echo -e " $2......$G Success $N"
     fi
 }
 
 if [ $USERID -ne 0 ]
 then 
-    echo "Error: you must have sudo access to execute the script"
+    echo -e " $R Error: you must have sudo access to execute the script $N"
     exit 1
 fi
 dnf list installed mysql -y
@@ -26,7 +26,7 @@ then
     dnf install mysql -y
     VALIDATE $? "Installing Mysql"
 else 
-    echo "Mysql is already installed"
+    echo -e " $Y Mysql is already installed $N"
 fi
 
 dnf list installed git -y
@@ -35,5 +35,5 @@ then
     dnf install git -y
     VALIDATE $? "Installing Git"
 else 
-    echo "Git is already installed"
+    echo -e " $Y Git is already installed $N"
 fi
