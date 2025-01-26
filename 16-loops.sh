@@ -35,4 +35,5 @@ do
         VALIDATE $? " Installing $package "
     else
         echo -e " $package is allready  $Y....installed $N "
+    fi
 done
