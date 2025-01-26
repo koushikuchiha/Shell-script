@@ -26,6 +26,8 @@ then
     exit 1
 fi
 
+echo "Script executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
+
 for package in $@
 do 
     dnf list installed $package &>>$LOG_FILE_NAME
